@@ -1,7 +1,8 @@
-export type ToDoListProps = {
-  listTask: Item[],
-  handleChange: (arr: Item[])=>void
+export type ToDoListProps<T> = {
+  listTask: T[],
+  handleChange: (arr: T[])=> void
 }
+
 
 export type ToDoItemProps = {
   data: Item,
@@ -19,4 +20,10 @@ export type User = {
   name: string,
   age: number,
   isMale: boolean,
+}
+
+const test : Record<string,boolean> = {
+  test1: true,
+  test2: false,
+  test3: true,
 }
